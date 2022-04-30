@@ -1,10 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+//* Context
+import { ExampleProvider } from 'context';
+
+//* Screens
+import { Home } from 'screens';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+    <ExampleProvider>
+      <Home />
+    </ExampleProvider>
+  </React.StrictMode>,
+);
