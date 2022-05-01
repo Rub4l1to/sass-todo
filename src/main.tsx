@@ -2,15 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 //* Context
-import { ExampleProvider } from 'context';
+import { TodoProvider } from 'context';
 
 //* Screens
 import { Home } from 'screens';
 
+import './styles/main.scss';
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ExampleProvider>
+    <TodoProvider>
       <Home />
-    </ExampleProvider>
+    </TodoProvider>
   </React.StrictMode>,
 );
