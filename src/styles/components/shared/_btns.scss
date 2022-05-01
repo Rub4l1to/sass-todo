@@ -1,0 +1,14 @@
+.btn {
+  border: none;
+  width: 100%;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 20px;
+
+  &--primary {
+    background: $second-cl;
+    color: $main-cl;
+  }
+}

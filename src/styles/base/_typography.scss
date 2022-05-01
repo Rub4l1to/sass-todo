@@ -1,0 +1,20 @@
+.heading {
+  font-family: $main-font;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: width 300ms ease;
+  &--logo {
+    font-size: 14px;
+    @include respond(tab-port) {
+      font-size: 22px;
+    }
+  }
+
+  &--secondary {
+    font-size: 14px;
+    @include respond(tab-port) {
+      font-size: 20px;
+    }
+  }
+}

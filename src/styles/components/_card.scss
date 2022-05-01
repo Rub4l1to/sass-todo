@@ -1,0 +1,66 @@
+.card {
+  padding: 40px 0;
+  height: 300px;
+  transition: all 0.2s ease-in-out;
+  background-color: $main-cl;
+  color: black;
+  @include flexbox(center, flex-start);
+  font-size: 18px;
+
+  &__text {
+    font-size: $main-font;
+    width: 80%;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  &__number {
+    display: block;
+    color: black;
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    border-radius: 15%;
+    background-color: $second-cl;
+    color: white;
+    width: 40px;
+    height: 40px;
+    @include flexbox(center, center);
+  }
+}
+
+.hover {
+  top: 0;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 20px 40px rgba(61, 65, 84, 0.15);
+    top: -2px;
+  }
+}
+
+.line {
+  &:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $second-cl;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.window-event {
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  z-index: 2000;
+
+  &__icon {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: all 500ms ease;
+    font-size: 20px;
+
+    &--plus {
+      background: #3b5998;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      background: $main-cl;
+      padding: 15px 25px;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}

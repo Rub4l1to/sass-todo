@@ -1,0 +1,33 @@
+.navbar {
+  @include width(100vw, 100vw);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: $third-cl;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  &__logo {
+    object-fit: cover;
+    max-width: 50px;
+    margin-right: 5px;
+  }
+
+  &__logo-container {
+    @include flexbox(flex-start, center);
+    gap: 8px;
+  }
+  &__counter {
+    font-size: 20px;
+    font-family: $main-font;
+
+    & > span {
+      display: inline-block;
+      width: 25px;
+      text-align: center;
+    }
+  }
+}
