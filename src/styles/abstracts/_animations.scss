@@ -17,7 +17,10 @@
 
 .fadeInEffect {
   animation: fadeIn ease 900ms;
+  display: block;
 }
 .fadeOutEffect {
   animation: fadeOut ease 900ms;
+
+  display: none;
 }
