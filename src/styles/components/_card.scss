@@ -6,6 +6,7 @@
   color: black;
   @include flexbox(center, flex-start);
   font-size: 18px;
+  cursor: default;
 
   &__text {
     font-size: $main-font;

@@ -1,5 +1,13 @@
 import React, { createContext } from 'react';
 
-interface TodoContextProps {}
+//* Interfaces
+import { ToDo } from 'interfaces/Todo';
+
+interface TodoContextProps {
+  list: ToDo[];
+
+  //* Methods
+  handleTodo: (todo: ToDo) => void;
+}
 
 export const TodoContext = createContext<TodoContextProps>({} as TodoContextProps);
