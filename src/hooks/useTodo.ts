@@ -1,32 +1,45 @@
-import React, { useState, useContext, ChangeEvent } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { useState, useContext, ChangeEvent, useEffect } from 'react';
 
 //* Context
 import { ModalContext, TodoContext } from 'context';
+import { ToDo } from '../interfaces/Todo';
 
 export const useTodo = () => {
-  const { handleTodo } = useContext(TodoContext);
-  const { handleModal } = useContext(ModalContext);
+  const { handleTodo, handleEditTodo, list } = useContext(TodoContext);
+  const { handleModal, handleModalData, show, data } = useContext(ModalContext);
 
   const [form, setForm] = useState({
     data: '',
   } as { data: string });
 
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setForm({ data: e.target.value });
-  };
+  useEffect(() => {
+    if (data) setForm({ data: data.data });
+  }, [show]);
 
   const addToDo = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const id: string = uuid();
-    handleTodo({ id, ...form });
+    handleTodo(form.data);
+    handleModal();
+    reset();
+  };
+
+  const editToDo = (e: ChangeEvent<HTMLFormElement>, todo: ToDo) => {
+    e.preventDefault();
+    handleEditTodo(todo);
+    handleModal();
+    reset();
+  };
+
+  const reset = () => {
     setForm({ data: '' });
+    handleModalData({ id: '', data: '' });
     handleModal();
   };
 
-  const handleEdit = (id: string) => {
-    console.log(id);
+  const handleEdit = (todo: ToDo) => {
+    const item = list.filter((element) => element.id === todo.id)[0];
+    handleModalData(item);
   };
 
-  return { addToDo, handleChange, handleEdit, form };
+  return { reset, addToDo, editToDo, setForm, handleEdit, form };
 };

@@ -2,15 +2,16 @@ import React, { useReducer } from 'react';
 
 import { ModalContext } from './ModalContext';
 import { modalReducer } from './modalReducer';
+import { ToDo } from '../../interfaces/Todo';
 
-export interface TodoState {
+export interface ModalState {
   show: boolean;
-  data?: string;
+  data?: ToDo;
 }
 
-const INITIAL_STATE: TodoState = {
+const INITIAL_STATE: ModalState = {
   show: false,
-  data: '',
+  data: {} as ToDo,
 };
 
 interface Props {
@@ -24,6 +25,10 @@ export const ModalProvider = ({ children }: Props) => {
     dispatch({ type: 'TOGGLE_MODAL' });
   };
 
+  const handleModalData = (todo: ToDo) => {
+    dispatch({ type: 'MODE_EDIT_MODAL', payload: todo });
+  };
+
   return (
     <ModalContext.Provider
       value={{
@@ -31,6 +36,7 @@ export const ModalProvider = ({ children }: Props) => {
 
         //* Methods
         handleModal,
+        handleModalData,
       }}
     >
       {children}

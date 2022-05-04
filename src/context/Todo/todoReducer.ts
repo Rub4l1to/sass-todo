@@ -23,12 +23,7 @@ export const todoReducer = (state: TodoState, action: TodoAction): TodoState => 
     case 'EDIT_TODO':
       return {
         ...state,
-        list: state.list.map((item: ToDo) => {
-          if (item.id === action.payload.id) {
-            return action.payload;
-          }
-          return item;
-        }),
+        list: state.list.map((todo) => (todo.id === action.payload.id ? action.payload : todo)),
       };
 
     default:

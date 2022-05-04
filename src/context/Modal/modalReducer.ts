@@ -1,7 +1,8 @@
-import { TodoState } from './ModalProvider';
+import { ModalState } from './ModalProvider';
 
 //* Interface
 import { Modal } from 'interfaces/Modal';
+import { ToDo } from '../../interfaces/Todo';
 
 type modalAction =
   | {
@@ -9,10 +10,10 @@ type modalAction =
     }
   | {
       type: 'MODE_EDIT_MODAL';
-      payload: string;
+      payload: ToDo;
     };
 
-export const modalReducer = (state: TodoState, action: modalAction): TodoState => {
+export const modalReducer = (state: ModalState, action: modalAction): ModalState => {
   switch (action.type) {
     case 'TOGGLE_MODAL':
       return {

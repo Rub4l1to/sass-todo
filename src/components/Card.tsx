@@ -21,7 +21,7 @@ const Card = ({ todo, index }: Props) => {
     <div className="card hover line">
       <p className="card__text">{todo.data}</p>
       <span className="heading card__number">{index + 1}</span>
-      <FaEdit className="card__icon" onClick={() => handleEdit(todo.id)} />
+      <FaEdit className="card__icon" onClick={() => handleEdit(todo)} />
     </div>
   );
 };

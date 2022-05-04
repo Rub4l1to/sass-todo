@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-
+import { v4 as uuid } from 'uuid';
 //* Interfaces
 import { ToDo } from 'interfaces/Todo';
 
@@ -21,8 +21,13 @@ interface Props {
 export const TodoProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(todoReducer, INITIAL_STATE);
 
-  const handleTodo = (todo: ToDo) => {
-    dispatch({ type: 'ADD_TODO', payload: todo });
+  const handleTodo = (data: string) => {
+    const id: string = uuid();
+    dispatch({ type: 'ADD_TODO', payload: { id, data } });
+  };
+
+  const handleEditTodo = (todo: ToDo) => {
+    dispatch({ type: 'EDIT_TODO', payload: todo });
   };
 
   return (
@@ -32,6 +37,7 @@ export const TodoProvider = ({ children }: Props) => {
 
         //* Methods
         handleTodo,
+        handleEditTodo,
       }}
     >
       {children}
