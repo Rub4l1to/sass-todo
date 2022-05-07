@@ -8,7 +8,7 @@ Bug reports and code and documentation patches are welcome. You can also help th
 
 ## 2. Contributing Code and Docs
 
-Before working on a new feature or a bug, please browse [existing issues](https://github.com/Rub4l1to/to-do/issues)
+Before working on a new feature or a bug, please browse [existing issues](https://github.com/Rub4l1to/to-do-context/issues)
 to see whether it has previously been discussed.
 
 If your change alters to-do behaviour or interface, it's a good idea to discuss it before you start working on it.
@@ -20,8 +20,8 @@ will generally not get merged. The same goes for PRs changing HTTPie’s behavio
 
 Conversely, PRs consisting of documentation improvements or tests for existing-yet-previously-untested behavior will very likely be merged. Therefore, docs and tests improvements are a great candidate for your first contribution.
 
-Consider also adding a [CHANGELOG](https://github.com/Rub4l1to/to-do/blob/master/CHANGELOG.md) entry for your changes.
+Consider also adding a [CHANGELOG](https://github.com/Rub4l1to/to-do-context/blob/master/CHANGELOG.md) entry for your changes.
 
 ---
 
-Finally, feel free to add yourself to [AUTHORS](https://github.com/Rub4l1to/to-do/blob/main/AUTHORS.md)!
+Finally, feel free to add yourself to [AUTHORS](https://github.com/Rub4l1to/to-do-context/blob/main/AUTHORS.md)!
