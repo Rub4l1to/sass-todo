@@ -7,6 +7,8 @@
 
 Notes manager with context functionality and styled-components stylish
 
+![Captura de Pantalla 2022-05-21 a las 19 54 36](https://user-images.githubusercontent.com/48188704/169663583-c8209add-61e6-48e5-8290-f981f4c23f9d.png)
+
 ## Features
 
 - Add a new task
