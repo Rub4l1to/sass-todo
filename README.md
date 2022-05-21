@@ -5,11 +5,12 @@
 ![React](https://img.shields.io/static/v1?style=for-the-badge&message=React&color=222222&logo=React&logoColor=61DAFB&label=)
 ![Sass](https://img.shields.io/static/v1?style=for-the-badge&message=Sass&color=CC6699&logo=Sass&logoColor=FFFFFF&label=)
 
-The web application basically tries to connect to the unplash API and perform image searches based on our own search.
+Notes manager with context functionality and styled-components stylish
 
 ## Features
 
-- Search engine for images
+- Add a new task
+- Edit a created task
 
 ## Setup
 
@@ -27,6 +28,6 @@ $ yarn start / npm run start
 
 ## Contributing
 
-Have a look through existing [Issues](https://github.com/Rub4l1to/to-do-context/issues) and [Pull Requests](https://github.com/Rub4l1to/to-do-context/pulls) that you could help with. If you'd like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/Rub4l1to/unplash-search/issues) using one of the templates provided.
+Have a look through existing [Issues](https://github.com/Rub4l1to/to-do-context/issues) and [Pull Requests](https://github.com/Rub4l1to/to-do-context/pulls) that you could help with. If you'd like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/Rub4l1to/to-do-context/issues) using one of the templates provided.
 
 [See contribution guide →](https://github.com/Rub4l1to/to-do-context/blob/main/CONTRIBUTING.md)
