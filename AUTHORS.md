@@ -4,4 +4,4 @@
 
 ## Patches, features, ideas
 
-[Complete list of contributors on GitHub](https://github.com/Rub4l1to/to-do/graphs/contributors)
+[Complete list of contributors on GitHub](https://github.com/Rub4l1to/to-do-context/graphs/contributors)
